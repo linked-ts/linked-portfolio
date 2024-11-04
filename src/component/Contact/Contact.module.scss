@@ -1,0 +1,52 @@
+.contact {
+    @apply flex items-center justify-center min-h-screen relative text-white;
+  
+    .overlay {
+      @apply max-w-xl text-center px-6 py-10 bg-black/70 rounded-md shadow-lg backdrop-blur-md;
+    }
+  
+    .request {
+      @apply text-sm tracking-widest text-indigo-400 uppercase mb-2;
+      font-family: "Roboto Mono", monospace;
+      font-weight: 700;
+    }
+  
+    .title {
+      @apply text-3xl font-bold mb-4;
+      font-family: "Roboto Mono", monospace;
+      font-weight: 700;
+    }
+  
+    .description {
+      @apply text-lg text-gray-400 mb-6;
+      font-family: "Roboto Mono", monospace;
+      font-weight: 400;
+    }
+  
+    .button {
+      @apply px-6 py-3 bg-purple-500 text-black font-semibold rounded-md shadow-md transition duration-300 ease-in-out;
+      @apply hover:bg-purple-600 hover:text-white;
+      font-family: "Roboto Mono", monospace;
+      font-weight: 700;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .overlay {
+      @apply px-4 py-8;
+    }
+  
+    .title {
+      @apply text-2xl;
+    }
+  
+    .description {
+      @apply text-base;
+    }
+  
+    .button {
+      @apply px-4 py-2;
+    }
+  }
+  

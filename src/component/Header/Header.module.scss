@@ -1,0 +1,83 @@
+/* Header.module.scss */
+.container {
+    @apply w-full min-h-screen flex flex-col;
+}
+
+/* Navbar Styles */
+.navbar {
+    @apply w-full flex items-center justify-between px-5 md:px-20 py-8 fixed top-0 z-50 bg-opacity-90 backdrop-blur-sm;
+}
+
+.navbarBrand {
+    @apply flex items-center gap-20;
+}
+
+.navbarTitle {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+    @apply text-3xl;
+}
+
+.navbarImg {
+    @apply h-5 md:h-6;
+}
+
+.nav {
+    @apply hidden md:flex gap-10;
+}
+
+.navItem {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+    @apply text-lg uppercase text-center text-white cursor-pointer transition-colors duration-200 hover:text-gray-400;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    @apply md:hidden flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer;
+}
+
+.hamburgerLine {
+    @apply w-6 h-0.5 bg-white my-0.5 transition-all duration-300;
+}
+
+.openMenu {
+    @apply absolute top-full left-0 flex flex-col items-center w-full gap-5 py-5 bg-purple-900 bg-opacity-90 backdrop-blur-sm;
+}
+
+/* Header Content Wrapper */
+.headerWrapper {
+    @apply flex items-center flex-1 w-full;
+}
+
+/* Header Styles */
+.header {
+    @apply w-full px-5 md:px-20 mt-20 md:mt-0;
+}
+
+.headerTitle {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+    @apply text-4xl md:text-5xl;
+}
+
+/* Typewriter Animation */
+
+
+.headerSubtitle {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    @apply text-lg md:text-2xl text-[#7C7A85] mt-5;
+}
+
+.headerBtns {
+    @apply flex items-center gap-5 md:gap-10 mt-10 text-lg;
+}
+
+.headerBtn1 {
+    @apply px-6 py-3 bg-white/10 text-white font-semibold rounded-md shadow-md backdrop-blur-sm transition-all duration-300 hover:bg-white/20 border border-[#FAFAFA] focus:outline-none focus:ring-2 focus:ring-white/50;
+}
+
+.headerBtn2 {
+    @apply flex px-5 py-3 items-center text-purple-500 font-semibold space-x-2 transition-colors duration-300 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50;
+}
