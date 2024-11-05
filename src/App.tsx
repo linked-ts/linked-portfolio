@@ -10,11 +10,18 @@ import Contact from './component/Contact/Contact';
 const App = () => {
   return (
     <>
-      <Header />
-      <About />
-      <Skills />
-      <SkillsSection />
-      <Contact />
+      <div id='home'>
+        <Header />
+      </div>
+      <div id='about'>
+        <About />
+      </div>
+      <div id='skills'>
+        <Skills />
+      </div>
+      <div id='contact'>
+        <Contact />
+      </div>
       <Footer />
     </>
   );

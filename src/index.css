@@ -16,7 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body {
+body, html {
   background: linear-gradient(to right, #000, #1a1a1a, #3b008b, #000);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -24,10 +24,18 @@ body {
   @media (max-width: 768px) {
       background-position: center;
   }
-
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+/* Добавьте в ваш глобальный CSS файл */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

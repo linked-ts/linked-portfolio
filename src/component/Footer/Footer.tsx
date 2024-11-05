@@ -7,9 +7,9 @@ const Footer = () => {
       <div className={styles.footerContent}>
         <p className={styles.copyright}>All rights reserved</p>
         <div className={styles.links}>
-          <a href="#" className={styles.link}>Telegram</a>
+          <a href="https://t.me/lov_vy" className={styles.link}>Telegram</a>
           <span className={styles.separator}>·</span>
-          <a href="#" className={styles.link}>Discord</a>
+          <a href="https://t.me/lov_vy" className={styles.link}>Discord</a>
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
-// Header.tsx
 import React, { useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import headerLogo from '../../assets/headerLogo.svg';
 import pricingButton from '../../assets/pricingButton.svg';
 import styles from './Header.module.scss';
@@ -22,10 +22,46 @@ const Header = () => {
 
                 {/* Desktop Menu */}
                 <ul className={`${styles.nav} ${isMenuOpen ? styles.openMenu : ''}`}>
-                    <li className={styles.navItem}>Home</li>
-                    <li className={styles.navItem}>About</li>
-                    <li className={styles.navItem}>Skills</li>
-                    <li className={styles.navItem}>Contact</li>
+                    <ScrollLink 
+                        className={styles.navItem} 
+                        to="home" 
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        offset={-70} // отступ для корректного позиционирования
+                    >
+                        Home
+                    </ScrollLink>
+                    <ScrollLink 
+                        className={styles.navItem} 
+                        to="about" 
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        offset={-70}
+                    >
+                        About
+                    </ScrollLink>
+                    <ScrollLink 
+                        className={styles.navItem} 
+                        to="skills" 
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        offset={-70}
+                    >
+                        Skills
+                    </ScrollLink>
+                    <ScrollLink 
+                        className={styles.navItem} 
+                        to="contact" 
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        offset={-70}
+                    >
+                        Contact
+                    </ScrollLink>
                 </ul>
 
                 {/* Hamburger Menu Icon */}
@@ -54,12 +90,12 @@ const Header = () => {
                     </p>
                     <div className={styles.headerBtns}>
                         <button className={styles.headerBtn1}>
-                            Contact
+                            <a href="https://t.me/lov_vy">Contact</a>
                         </button>
-                        <button className={styles.headerBtn2}>
-                            <img src={pricingButton} alt="Pricing icon" />
-                            <span>Pricing</span>
-                        </button>
+                    <button className="aboutBtn2 flex px-5 py-3 items-center text-purple-500 font-semibold space-x-2 transition duration-300 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+                        <img src={pricingButton} alt="Pricing icon" className="w-5 h-5" />
+                        <span><a href="https://t.me/lov_vy">Pricing</a></span>
+                    </button>
                     </div>
                 </div>
             </div>

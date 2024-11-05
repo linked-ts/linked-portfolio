@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithub, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import styles from './Skills.module.scss'
 
 type SkillProps = {
   name: string;
@@ -21,12 +20,12 @@ const skillsData: SkillProps[] = [
 const Skill = ({ name, icon, progress }: SkillProps) => {
   return (
     <motion.div
-      className="flex flex-col items-center text-white m-4 h-80"
+      className="flex flex-col items-center text-white m-4 w-40 sm:w-48 sm:h-48 md:w-52 md:h-52"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      <div className="relative w-24 h-24 rounded-full bg-gray-800 flex items-center justify-center shadow-lg">
+      <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-gray-800 flex items-center justify-center shadow-lg">
         <svg className="absolute top-0 left-0 w-full h-full transform rotate-90">
           <circle
             cx="50%"
@@ -50,10 +49,8 @@ const Skill = ({ name, icon, progress }: SkillProps) => {
         </svg>
         <div className="text-3xl text-purple-500">{icon}</div>
       </div>
-      <p className="mt-2 font-semibold"
-      style={{fontFamily: 'Roboto Mono', fontWeight: 400}}>{name}</p>
-      <p className="text-gray-400"
-      style={{fontFamily: 'Roboto Mono', fontWeight: 400}}>{progress}%</p>
+      <p className="mt-2 font-semibold text-base md:text-lg">{name}</p>
+      <p className="text-gray-400 text-sm md:text-base">{progress}%</p>
     </motion.div>
   );
 };
@@ -75,7 +72,7 @@ const SkillsSection = () => {
           },
         }}
       >
-        {skillsData.map((skill, index) => (
+        {skillsData.map((skill) => (
           <Skill key={skill.name} {...skill} />
         ))}
       </motion.div>
