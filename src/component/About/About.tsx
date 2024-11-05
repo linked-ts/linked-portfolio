@@ -1,4 +1,3 @@
-import React from 'react';
 import aboutImg from '../../assets/aboutMe.svg';
 import pricingImg from '../../assets/pricingButton.svg';
 import './About.css'

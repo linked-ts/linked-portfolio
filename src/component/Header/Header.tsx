@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import headerLogo from '../../assets/headerLogo.svg';
 import pricingButton from '../../assets/pricingButton.svg';
